@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        listView=findViewById(R.id.listviewid);
-        btAlert=findViewById(R.id.button);
+         AnhXa();
 
         btAlert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,12 +30,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-         arrayList =new ArrayList<String>();
-         arrayAdapter =new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,arrayList);
-         listView.setAdapter(arrayAdapter);
 
 
 
+
+
+
+    }
+    private void  AnhXa()
+    {
+        listView=findViewById(R.id.listviewid);
+        btAlert=findViewById(R.id.button);
+        arrayList =new ArrayList<String>();
+        arrayAdapter =new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1,arrayList);
+        listView.setAdapter(arrayAdapter);
 
     }
 }
